@@ -3,9 +3,9 @@ nltk.download("punkt")
 nltk.download("stopwords")
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize, sent_tokenize
-
+import pyautogui
 print("enter text to summarize")
-input1 = input()
+input1 = pyautogui.prompt('Enter Text To Summarize')
 text = f"""{input1}"""
 
 stopWords = set(stopwords.words("english"))
@@ -45,6 +45,4 @@ quotient = sum/res
 percent = quotient * 100
 f = round(percent, 2)
 print ("\n \nThe Number of Word in given text were " +  str(res) + " and After summarization are " + str(sum) + f" Reduced by {f}%")
-
-
-
+pyautogui.alert(text=summary + " \n \n Number of Word in given text: " +  str(res) + " \n After summarization: " + str(sum) + f" \n Reduced by:  {f}%" , button='OK')
