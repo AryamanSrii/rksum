@@ -8,7 +8,10 @@
   <!-- CSS  -->
 
     <link href="{{ url_for('static',filename='css/materialize.css') }}" rel="stylesheet">
+      <link href="{{ url_for('static',filename='img/favicon.png') }}" rel="icon">
+
        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+       
 
     <link href="{{ url_for('static',filename='css/style.css') }}" rel="stylesheet">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -17,7 +20,9 @@
 </head>
 <body>
   <body style = "background-color : #242424">
-            <center><h1 style = "color:white; font: gabrielle"> Summaryzer </h1></center>
+            <center><h1 style = "color:#ffc872; font: gabrielle"> Summaryzer </h1></center>
+           <center> <img src="{{ url_for('static',filename='img/logo.png') }}" alt="logo" width="15%"></center>
+
 
 <br><br><br><br><br><br>
  <div class="container">
@@ -28,12 +33,31 @@
         <div class="input-field col s12 m10">
           <div class="icon-block">
            <form method="POST" action="/analyze">
-         <textarea name="rawtext" cols="200" rows="400" class="form-control" required="true" placeholder="Enter Text Here"></textarea>
+         <textarea name="rawtext" cols="200" rows="400" class="form-control" placeholder="Enter Text Here"></textarea>
 
           
          <br/>
-          <center><button class="button b2" type="submit">Summarize</button></center>
+          <center><button class="button b2" type="submit">Summarize <i class=" fa fa-newspaper-o" style="font-size:24px"></i>
+</button><button class="button b2" type="reset">Clear</button></center>
+      
+        </form>
+          </div>
+        </div>
+
+      </div>
+<div class="row">
+        <div class="input-field col s12 m10">
+          <div class="icon-block">
+           <form method="POST" action="/analyze_url">
+<textarea name="raw_url" cols="200" rows="400" class="form-control" placeholder="Enter URL Here"></textarea>       <center>   <button class="button b2" type="submit">Summarize</button><button class="button b2" type="reset">Clear</button></center>
           
+        </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
         </form>
           </div>
         </div>
