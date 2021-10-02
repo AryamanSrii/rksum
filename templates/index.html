@@ -3,14 +3,18 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Summaryzer</title>
+  <title>Summarizer</title>
 
   <!-- CSS  -->
 
     <link href="{{ url_for('static',filename='css/materialize.css') }}" rel="stylesheet">
       <link href="{{ url_for('static',filename='img/favicon.png') }}" rel="icon">
+      <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
 
        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
        
 
     <link href="{{ url_for('static',filename='css/style.css') }}" rel="stylesheet">
@@ -19,9 +23,10 @@
 </head>
 </head>
 <body>
-  <body style = "background-color : #242424">
-            <center><h1 style = "color:#ffc872; font: gabrielle"> Summaryzer </h1></center>
-           <center> <img src="{{ url_for('static',filename='img/logo(1).png') }}" alt="logo" width="15%"></center>
+  <body style = "background-color : #283048">
+            <center><h1 style = "color:#6577B3 ; font: gabrielle"> Summarizer </h1></center><br>
+            <p style = "color: #6577B3 ;"class="line-1 anim-typewriter">A Text Summarizer made by AmrevX </p>
+
 
 
 <br><br><br><br><br><br>
@@ -33,7 +38,7 @@
         <div class="input-field col s12 m10">
           <div class="icon-block">
            <form method="POST" action="/analyze">
-         <textarea name="rawtext" cols="200" rows="400" class="form-control" placeholder="Enter Text Here"></textarea>
+         <textarea id="autoresizing" name="rawtext" cols="200" rows="400" class="form-control" placeholder="Enter Text Here" required></textarea>
 
           
          <br/>
@@ -49,7 +54,7 @@
         <div class="input-field col s12 m10">
           <div class="icon-block">
            <form method="POST" action="/analyze_url">
-<textarea name="raw_url" cols="200" rows="400" class="form-control" placeholder="Enter URL Here"></textarea>       <center>   <button class="button b2" type="submit">Summarize</button><button class="button b2" type="reset">Clear</button></center>
+<textarea id="autoresizing" name="raw_url" cols="200" rows="400" class="form-control" placeholder="Enter URL Here" required></textarea>       <center>   <button class="button b2" type="submit">Summarize <i class=" fa fa-newspaper-o" style="font-size:24px"></i></button><button class="button b2" type="reset">Clear</button></center>
           
         </form>
           </div>
@@ -86,21 +91,21 @@
   <br><br><br><br><br><br>
 
   
-  <footer class="page-footer grey darken-4">
-    <div class="container" id="aboutapp">
+  <footer style = "background-color : #283048" class="page-footer">
+    <div style = "background-color : #283048; " class="container" id="aboutapp">
       <div class="row">
         <div class="col l6 s12">
-        <center>  <h5 class="white-text">Copyright &copy Aryaman Srivastava 2021</h5> </center>
+        <center>  <h5class="white-text">Copyright &copy AmrevX 2021</h5> </center>
+                <center>  <h5class="white-text">For any further assistance visit amrevx.in or <a href="https://instagram.com/amrevx" class="fa fa-instagram"></a>
+</h5> </center>
+<br>
         </div>
-      
-
+<!-- Badge Code - Do Not Change The Code --><div class="col-xs-12 mt20" id="bg"><div style="margin:0px auto;width:133px;background: #283048;text-align:left;display:flex;border-radius:5px"><span style="padding:7px;display:inline-block;border-right:1px solid #746dba"><a href="http://visitorshitcounter.com" rel="nofollow noopener"  target="_blank" title="https://visitorshitcounter.com/"><img src="https://visitorshitcounter.com/img/s-logo.svg" alt="https://visitorshitcounter.com/" style="width:100%;border:none;float:left"></a></span><span class="text" id="dupli_hit_counter"   style="padding:10px 0 0 0;display:inline-block;color:#ffffff;width:100%;text-align:center;"></span></span><input type="hidden" id="site_val"   value="https://visitorshitcounter.com/counterDisplay?code=bac6572bedfb1955a6fcbd0ef2097372&style=0017&pad=4&type=page&initCount=25"></div></div><script src="https://visitorshitcounter.com/js/badgess.js?v=1632116002"></script><!-- Badge Code End Here -->
 </footer>
   <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="{{ url_for('static', filename='js/materialize.js') }}"></script>
 
     <script src="{{ url_for('static', filename='js/init.js') }}"></script>
-
-<!-- Jesse JCharis -->
   </body>
 </html>
